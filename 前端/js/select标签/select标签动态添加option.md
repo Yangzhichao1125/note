@@ -2,9 +2,10 @@
 
 ```jsp
 function numfun() {
-	//选择框保留第一个选项，其他全删
+	<%-- 选择框保留第一个选项，其他全删 --%>
     document.getElementById("sel").options.length=1;
     <% for(int i=0;i<b.length;i++){ %>
+	<%-- 在jsp中，value等号后面建议食用单引号（实验了一下，单引双引互换位置，js报错）--%>
     $("#sel").append("<option value=''><%= b[i] %></option>");
     <%}%>
 }
