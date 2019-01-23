@@ -1,0 +1,49 @@
+# nginx 路径错误
+
+```
+#user  www www;
+worker_processes  2;
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+
+    keepalive_timeout  65;
+
+    gzip  on;
+        server {
+        listen       80;
+        server_name  manage.yangzhichao.com;
+
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        location / {
+                        proxy_pass http://192.168.124.6:9001;
+                        proxy_connect_timeout 600;
+                        proxy_read_timeout 600;
+        }
+    }
+        server {
+        listen       80;
+        server_name  api.leyou.com;
+
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        location / {
+                        proxy_pass http://192.168.124.6:10010;
+                        proxy_connect_timeout 600;
+                        proxy_read_timeout 600;
+        }
+    }
+}
+
+```
+
