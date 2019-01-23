@@ -1,3 +1,9 @@
+
+
+[TOC]
+
+
+
 # select标签动态添加option
 
 ```jsp
@@ -10,6 +16,21 @@ function numfun() {
     <%}%>
 }
 ```
+
+## JQ删除select中的options
+
+```js
+$("#sel").find("option").remove();
+```
+
+## select中添加服务端定义的option
+
+```jsp
+ String bbb = "<option value=''> rrrr </option>"+"<option value=''> ddd </option>";
+ //select中添加服务端定义的option；
+$("#sel").append(b);
+```
+
 
 
 ## jsp源码如下：
@@ -56,3 +77,10 @@ function numfun() {
 </html>
 
 ```
+
+##  
+
+
+
+
+
