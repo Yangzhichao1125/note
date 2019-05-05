@@ -1,4 +1,4 @@
-# hadoop
+# hadoop入门
 
 ## 1、hadoop应用场景
 
@@ -88,4 +88,8 @@
 
 　　6.合并完成之后上传给namenode。namenode删除原来的fsimage和edits，并将edits.new重命名为editlogs，将fsimage.chkpoint重新命名为fsimage。就可以进行正常的hdfs机制
 
- 
+## 10、DateNode工作机制
+
+​				使用cat   >>  命令。可以还原切割前的文件。
+
+​				且tar -zxvf 不需要文件名为tar。gz结尾。只需是tar文件即可。
