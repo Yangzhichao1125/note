@@ -44,34 +44,15 @@ Caused by: java.net.ConnectException: Connection refused
 
 ## 3、java操作hdfs代码
 
-package com.yang.hadoop;
-
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.*;
-import org.apache.hadoop.io.IOUtils;
-import org.junit.Before;
-import org.junit.Test;
-
-
-public class HdfsUtil {
-    FileSystem fs=null;
-
-    @Before
-    public void init() throws IOException, InterruptedException, URISyntaxException{
+```java
+@Before
+public void init() throws IOException, InterruptedException, URISyntaxException{
 //     构造一个配置参数封装对象
         Configuration conf = new Configuration();
 //		构造一个hdfs的客户端
         fs=FileSystem.get(new URI("hdfs://10.211.55.5:9000"), conf, "root");
     }
-
+```
 ```java
 /*
  * 从本地上传文件到hdfs中
