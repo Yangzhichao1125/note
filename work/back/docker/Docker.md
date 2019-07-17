@@ -20,3 +20,6 @@
 
 然后mysql就可以连接啦。几秒钟的事简直无敌
 
+
+
+docker run --name mymysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci 

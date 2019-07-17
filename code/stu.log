@@ -1,0 +1,25 @@
+2019-07-17 16:58:27.781  INFO 11946 --- [main] c.yang.springboot.code.CodeApplication   : Starting CodeApplication on ZhiChao with PID 11946 (started by yang in /Users/yang/笔记/git-note/note/code)
+2019-07-17 16:58:27.788  INFO 11946 --- [main] c.yang.springboot.code.CodeApplication   : No active profile set, falling back to default profiles: default
+2019-07-17 16:58:28.902  INFO 11946 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-17 16:58:28.919  INFO 11946 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-17 16:58:28.919  INFO 11946 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-17 16:58:28.984  INFO 11946 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-17 16:58:28.984  INFO 11946 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1125 ms
+2019-07-17 16:58:29.350  INFO 11946 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-17 16:58:29.536  INFO 11946 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-17 16:58:29.539  INFO 11946 --- [main] c.yang.springboot.code.CodeApplication   : Started CodeApplication in 2.331 seconds (JVM running for 3.064)
+2019-07-17 16:58:40.872  INFO 11946 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-17 16:58:40.872  INFO 11946 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-17 16:58:40.877  INFO 11946 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-07-17 16:58:40.915  INFO 11946 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-17 16:58:40.916  WARN 11946 --- [http-nio-8080-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-07-17 16:58:41.025  INFO 11946 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-17 16:58:41.032 DEBUG 11946 --- [http-nio-8080-exec-1] c.y.springboot.code.dao.StudentDao.add   : ==>  Preparing: INSERT INTO student (NAME) VALUES (?) 
+2019-07-17 16:58:41.052 DEBUG 11946 --- [http-nio-8080-exec-1] c.y.springboot.code.dao.StudentDao.add   : ==> Parameters: 杨(String)
+2019-07-17 16:58:41.062 DEBUG 11946 --- [http-nio-8080-exec-1] c.y.springboot.code.dao.StudentDao.add   : <==    Updates: 1
+2019-07-17 16:58:56.237 DEBUG 11946 --- [http-nio-8080-exec-2] c.y.s.code.dao.StudentDao.getAll         : ==>  Preparing: SELECT * FROM student 
+2019-07-17 16:58:56.237 DEBUG 11946 --- [http-nio-8080-exec-2] c.y.s.code.dao.StudentDao.getAll         : ==> Parameters: 
+2019-07-17 16:58:56.263 DEBUG 11946 --- [http-nio-8080-exec-2] c.y.s.code.dao.StudentDao.getAll         : <==      Total: 2
+2019-07-17 16:59:17.763  INFO 11946 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-17 16:59:17.767  INFO 11946 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-07-17 16:59:17.789  INFO 11946 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
