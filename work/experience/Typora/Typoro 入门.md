@@ -23,7 +23,8 @@ control + K：[超链接](www.baidu.com)
 目录生成：[toc]
 
 
-
+git => fork => clone => add => commit =>push => pull requests
+团队合作可在修改的代码上方写评论以及直接写建议代码
 
 
 
