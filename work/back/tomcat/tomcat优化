@@ -1,0 +1,25 @@
+tomcat 优化
+
+1.优化：一条龙
+2.jvm概念
+3.tomcat内存优化
+localhost:8080/manager/status(进入tomcat管理图形化界面)
+
+状态码：401：未被授权
+
+4、添加用户名密码
+5、看jvm内存，最大并发数
+6、jmap heap 进程号
+	-server
+	-Xms1600M
+	-Xmx1600M
+	-Xss512k
+	-XX:useBiasedLocking
+7、并发优化
+	server.xml(并发)
+		HTTP/1.1   --默认bio
+		改nio加线程
+		压缩html
+	catalina.sh （内存）
+	web.xml
+8、故障怎么办
