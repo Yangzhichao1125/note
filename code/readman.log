@@ -1,0 +1,11 @@
+2019-09-11 17:23:30.776 ERROR 5113 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
+2019-09-11 17:23:30.900  INFO 5113 --- [main] c.y.s.code.CodeApplicationTests          : Starting CodeApplicationTests on ZhiChao with PID 5113 (started by yang in /Users/yang/笔记/git-note/note/code)
+2019-09-11 17:23:30.901  INFO 5113 --- [main] c.y.s.code.CodeApplicationTests          : No active profile set, falling back to default profiles: default
+2019-09-11 17:23:32.432  INFO 5113 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-11 17:23:32.830  INFO 5113 --- [main] c.y.s.code.CodeApplicationTests          : Started CodeApplicationTests in 2.321 seconds (JVM running for 2.976)
+2019-09-11 17:23:32.973  INFO 5113 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-11 17:23:32.977  WARN 5113 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.cj.jdbc.NonRegisteringDriver was not found, trying direct instantiation.
+2019-09-11 17:23:33.150  INFO 5113 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-11 17:23:33.208  INFO 5113 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-11 17:23:33.209  INFO 5113 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-11 17:23:33.218  INFO 5113 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

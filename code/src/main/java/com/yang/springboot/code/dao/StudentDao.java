@@ -16,7 +16,7 @@ import java.util.List;
  * @date 2019/07/17
  */
 @Repository
-@Mapper
+//@Mapper
 public interface StudentDao {
 
     //增
