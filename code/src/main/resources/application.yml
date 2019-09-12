@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/yang
+    url: jdbc:mysql://10.211.55.9:3306/readman
     driver-class-name: com.mysql.cj.jdbc.NonRegisteringDriver
     username: root
     password: 123456
@@ -19,3 +19,5 @@ logging:
             dao:debug
   path: concretepage/logs
   file: readman.log
+
+
