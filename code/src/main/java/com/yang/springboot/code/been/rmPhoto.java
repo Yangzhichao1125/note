@@ -17,4 +17,5 @@ public class rmPhoto {
     private String address;
     private Date createTime;
     private Date modifyTime;
+    private int source;
 }

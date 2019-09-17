@@ -32,14 +32,24 @@ public class CodeApplicationTests {
     @Test
     public void upload() throws Exception {
 
-//        String confUrl=this.getClass().getClassLoader().getResource("/fdfs_client.properties").getPath();
-
         FastDFSClient fastDFSClient = new FastDFSClient("classpath:fdfs_client.properties");
-        //上传文件
-        String filePath = fastDFSClient.uploadFile("");
-        System.out.println("返回路径：" + filePath);
 
-        photoDao.addPhoto(filePath,2);
+        String path = "/Users/yang/Pictures/down/2019-09-15/";		//要遍历的路径
+        File file = new File(path);		                            //获取其file对象
+        File[] fs = file.listFiles();
+        int success = 0;
+        int faile = 0;
+        for (File f:fs ) {
+            String filePath = fastDFSClient.uploadFile(path+f.getName());
+            if (filePath != null) {
+                photoDao.addPhoto(filePath,1);
+                success++;
+            }else {
+                faile ++;
+            }
+        }
+        System.out.println("success = " + success);
+        System.out.println("faile = " + faile);
 
 
     }

@@ -1,156 +1,77 @@
-2019-09-12 08:36:54.377 ERROR 1015 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
-2019-09-12 08:36:54.467  INFO 1015 --- [main] c.y.s.code.CodeApplicationTests          : Starting CodeApplicationTests on ZhiChao with PID 1015 (started by yang in /Users/yang/myNote/git-note/note/code)
-2019-09-12 08:36:54.468  INFO 1015 --- [main] c.y.s.code.CodeApplicationTests          : No active profile set, falling back to default profiles: default
-2019-09-12 08:36:55.816  INFO 1015 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-12 08:36:56.377  INFO 1015 --- [main] c.y.s.code.CodeApplicationTests          : Started CodeApplicationTests in 3.256 seconds (JVM running for 4.365)
-2019-09-12 08:36:56.636  INFO 1015 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:14:29.069 ERROR 1676 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
-2019-09-12 10:14:29.184  INFO 1676 --- [main] c.y.s.code.CodeApplicationTests          : Starting CodeApplicationTests on ZhiChao with PID 1676 (started by yang in /Users/yang/myNote/git-note/note/code)
-2019-09-12 10:14:29.185  INFO 1676 --- [main] c.y.s.code.CodeApplicationTests          : No active profile set, falling back to default profiles: default
-2019-09-12 10:14:30.766  INFO 1676 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:14:31.304  INFO 1676 --- [main] c.y.s.code.CodeApplicationTests          : Started CodeApplicationTests in 2.684 seconds (JVM running for 3.517)
-2019-09-12 10:14:31.473  INFO 1676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-12 10:14:31.480  WARN 1676 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.cj.jdbc.NonRegisteringDriver was not found, trying direct instantiation.
-2019-09-12 10:14:32.601 ERROR 1676 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
-
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136) ~[HikariCP-3.2.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369) ~[HikariCP-3.2.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198) ~[HikariCP-3.2.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467) [HikariCP-3.2.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541) [HikariCP-3.2.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.2.0.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.2.0.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157) [spring-jdbc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) [spring-jdbc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) [spring-jdbc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) [mybatis-spring-2.0.2.jar:2.0.2]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) [mybatis-spring-2.0.2.jar:2.0.2]
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.5.2.jar:3.5.2]
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:85) [mybatis-3.5.2.jar:3.5.2]
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) [mybatis-3.5.2.jar:3.5.2]
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) [mybatis-3.5.2.jar:3.5.2]
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) [mybatis-3.5.2.jar:3.5.2]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) [mybatis-3.5.2.jar:3.5.2]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) [mybatis-3.5.2.jar:3.5.2]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) [mybatis-spring-2.0.2.jar:2.0.2]
-	at com.sun.proxy.$Proxy67.insert(Unknown Source) [na:na]
-	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271) [mybatis-spring-2.0.2.jar:2.0.2]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) [mybatis-3.5.2.jar:3.5.2]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) [mybatis-3.5.2.jar:3.5.2]
-	at com.sun.proxy.$Proxy73.addPhoto(Unknown Source) [na:na]
-	at com.yang.springboot.code.CodeApplicationTests.upload(CodeApplicationTests.java:42) [test-classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_191]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_191]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	... 63 common frames omitted
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	... 66 common frames omitted
-
-2019-09-12 10:14:32.620  INFO 1676 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:15:26.956 ERROR 1689 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
-2019-09-12 10:15:27.077  INFO 1689 --- [main] c.y.s.code.CodeApplicationTests          : Starting CodeApplicationTests on ZhiChao with PID 1689 (started by yang in /Users/yang/myNote/git-note/note/code)
-2019-09-12 10:15:27.090  INFO 1689 --- [main] c.y.s.code.CodeApplicationTests          : No active profile set, falling back to default profiles: default
-2019-09-12 10:15:28.579  INFO 1689 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:15:29.118  INFO 1689 --- [main] c.y.s.code.CodeApplicationTests          : Started CodeApplicationTests in 2.47 seconds (JVM running for 3.225)
-2019-09-12 10:15:29.260  INFO 1689 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-12 10:15:29.265  WARN 1689 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.cj.jdbc.NonRegisteringDriver was not found, trying direct instantiation.
-2019-09-12 10:15:29.424  INFO 1689 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-12 10:15:29.460  INFO 1689 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-09-12 10:15:29.471  INFO 1689 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-09-12 10:15:29.471  INFO 1689 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:16:39.765 ERROR 1701 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
-2019-09-12 10:16:39.880  INFO 1701 --- [main] c.y.s.code.CodeApplicationTests          : Starting CodeApplicationTests on ZhiChao with PID 1701 (started by yang in /Users/yang/myNote/git-note/note/code)
-2019-09-12 10:16:39.881  INFO 1701 --- [main] c.y.s.code.CodeApplicationTests          : No active profile set, falling back to default profiles: default
-2019-09-12 10:16:41.225  INFO 1701 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:16:41.740  INFO 1701 --- [main] c.y.s.code.CodeApplicationTests          : Started CodeApplicationTests in 2.256 seconds (JVM running for 2.963)
-2019-09-12 10:16:41.918  INFO 1701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-12 10:16:41.922  WARN 1701 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.cj.jdbc.NonRegisteringDriver was not found, trying direct instantiation.
-2019-09-12 10:16:42.062  INFO 1701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-12 10:16:42.093  INFO 1701 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-09-12 10:16:42.101  INFO 1701 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-09-12 10:16:42.101  INFO 1701 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:19:15.108 ERROR 1728 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
-2019-09-12 10:19:15.201  INFO 1728 --- [main] c.y.s.code.CodeApplicationTests          : Starting CodeApplicationTests on ZhiChao with PID 1728 (started by yang in /Users/yang/myNote/git-note/note/code)
-2019-09-12 10:19:15.202  INFO 1728 --- [main] c.y.s.code.CodeApplicationTests          : No active profile set, falling back to default profiles: default
-2019-09-12 10:19:16.625  INFO 1728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:19:17.104  INFO 1728 --- [main] c.y.s.code.CodeApplicationTests          : Started CodeApplicationTests in 2.234 seconds (JVM running for 2.863)
-2019-09-12 10:19:17.267  INFO 1728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-12 10:19:17.271  WARN 1728 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.cj.jdbc.NonRegisteringDriver was not found, trying direct instantiation.
-2019-09-12 10:19:17.414  INFO 1728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-12 10:19:17.538  INFO 1728 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-09-12 10:19:17.546  INFO 1728 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-09-12 10:19:17.547  INFO 1728 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:21:21.227 ERROR 1755 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
-2019-09-12 10:21:21.324  INFO 1755 --- [main] c.y.s.code.CodeApplicationTests          : Starting CodeApplicationTests on ZhiChao with PID 1755 (started by yang in /Users/yang/myNote/git-note/note/code)
-2019-09-12 10:21:21.325  INFO 1755 --- [main] c.y.s.code.CodeApplicationTests          : No active profile set, falling back to default profiles: default
-2019-09-12 10:21:22.780  INFO 1755 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-12 10:21:23.284  INFO 1755 --- [main] c.y.s.code.CodeApplicationTests          : Started CodeApplicationTests in 2.384 seconds (JVM running for 3.028)
-2019-09-12 10:21:23.439  INFO 1755 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-12 10:21:23.444  WARN 1755 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.cj.jdbc.NonRegisteringDriver was not found, trying direct instantiation.
-2019-09-12 10:21:23.588  INFO 1755 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-12 10:21:23.692  INFO 1755 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-09-12 10:21:23.701  INFO 1755 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-09-12 10:21:23.702  INFO 1755 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-17 17:11:30.992 ERROR 1777 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
+2019-09-17 17:11:31.126  INFO 1777 --- [main] c.yang.springboot.code.CodeApplication   : Starting CodeApplication on ZhiChao with PID 1777 (/Users/yang/myNote/git-note/note/code/target/classes started by yang in /Users/yang/myNote/git-note/note/code)
+2019-09-17 17:11:31.127  INFO 1777 --- [main] c.yang.springboot.code.CodeApplication   : No active profile set, falling back to default profiles: default
+2019-09-17 17:11:32.252  INFO 1777 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-09-17 17:11:32.275  INFO 1777 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-17 17:11:32.275  INFO 1777 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-17 17:11:32.370  INFO 1777 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-17 17:11:32.370  INFO 1777 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1167 ms
+2019-09-17 17:11:32.567  INFO 1777 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-17 17:11:32.909  INFO 1777 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-09-17 17:11:32.912  INFO 1777 --- [main] c.yang.springboot.code.CodeApplication   : Started CodeApplication in 2.378 seconds (JVM running for 3.123)
+2019-09-17 17:13:06.229  INFO 1777 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-17 17:13:06.229  INFO 1777 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-17 17:13:06.236  INFO 1777 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-09-17 17:15:44.412  INFO 1777 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-17 17:55:22.275 ERROR 2222 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
+2019-09-17 17:55:22.335  INFO 2222 --- [main] c.yang.springboot.code.CodeApplication   : Starting CodeApplication on ZhiChao with PID 2222 (/Users/yang/myNote/git-note/note/code/target/classes started by yang in /Users/yang/myNote/git-note/note/code)
+2019-09-17 17:55:22.336  INFO 2222 --- [main] c.yang.springboot.code.CodeApplication   : No active profile set, falling back to default profiles: default
+2019-09-17 17:55:23.117  INFO 2222 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-09-17 17:55:23.135  INFO 2222 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-17 17:55:23.136  INFO 2222 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-17 17:55:23.197  INFO 2222 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-17 17:55:23.198  INFO 2222 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 831 ms
+2019-09-17 17:55:23.376  INFO 2222 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-17 17:55:23.647  INFO 2222 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-09-17 17:55:23.651  INFO 2222 --- [main] c.yang.springboot.code.CodeApplication   : Started CodeApplication in 1.714 seconds (JVM running for 2.52)
+2019-09-17 17:55:25.049  INFO 2222 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-17 17:55:34.882 ERROR 2231 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
+2019-09-17 17:55:34.961  INFO 2231 --- [main] c.yang.springboot.code.CodeApplication   : Starting CodeApplication on ZhiChao with PID 2231 (/Users/yang/myNote/git-note/note/code/target/classes started by yang in /Users/yang/myNote/git-note/note/code)
+2019-09-17 17:55:34.962  INFO 2231 --- [main] c.yang.springboot.code.CodeApplication   : No active profile set, falling back to default profiles: default
+2019-09-17 17:55:35.859  INFO 2231 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-09-17 17:55:35.878  INFO 2231 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-17 17:55:35.878  INFO 2231 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-17 17:55:35.947  INFO 2231 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-17 17:55:35.947  INFO 2231 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 926 ms
+2019-09-17 17:55:36.206  INFO 2231 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-17 17:55:36.498  INFO 2231 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-09-17 17:55:36.501  INFO 2231 --- [main] c.yang.springboot.code.CodeApplication   : Started CodeApplication in 1.988 seconds (JVM running for 3.1)
+2019-09-17 17:55:42.495  INFO 2231 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-17 17:55:42.495  INFO 2231 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-17 17:55:42.500  INFO 2231 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-09-17 17:56:14.575  INFO 2231 --- [http-nio-8082-exec-2] c.y.springboot.code.controler.WXLogin    : **************************************   username = zhangsan
+2019-09-17 17:57:32.633  INFO 2231 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-17 18:01:58.038 ERROR 2320 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
+2019-09-17 18:01:58.098  INFO 2320 --- [main] c.yang.springboot.code.CodeApplication   : Starting CodeApplication on ZhiChao with PID 2320 (/Users/yang/myNote/git-note/note/code/target/classes started by yang in /Users/yang/myNote/git-note/note/code)
+2019-09-17 18:01:58.099  INFO 2320 --- [main] c.yang.springboot.code.CodeApplication   : No active profile set, falling back to default profiles: default
+2019-09-17 18:01:59.077  INFO 2320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-09-17 18:01:59.099  INFO 2320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-17 18:01:59.103  INFO 2320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-17 18:01:59.181  INFO 2320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-17 18:01:59.182  INFO 2320 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1046 ms
+2019-09-17 18:01:59.341  INFO 2320 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-17 18:01:59.590  INFO 2320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-09-17 18:01:59.593  INFO 2320 --- [main] c.yang.springboot.code.CodeApplication   : Started CodeApplication in 1.81 seconds (JVM running for 2.234)
+2019-09-17 18:02:04.393  INFO 2320 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-17 18:02:04.393  INFO 2320 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-17 18:02:04.452  INFO 2320 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 59 ms
+2019-09-17 18:02:04.914  INFO 2320 --- [http-nio-8082-exec-1] c.y.springboot.code.controler.WXLogin    : oSC-A4gJk2LpuGaAt_f71WcgIBOc
+2019-09-17 18:02:48.296  INFO 2320 --- [http-nio-8082-exec-2] c.y.springboot.code.controler.WXLogin    : oSC-A4gJk2LpuGaAt_f71WcgIBOc
+2019-09-17 18:03:21.506  INFO 2320 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-17 18:03:25.124 ERROR 2358 --- [main] o.s.b.c.l.LoggingApplicationListener     : Cannot set level 'dao:debug' for 'com.yang.springboot.code'
+2019-09-17 18:03:25.175  INFO 2358 --- [main] c.yang.springboot.code.CodeApplication   : Starting CodeApplication on ZhiChao with PID 2358 (/Users/yang/myNote/git-note/note/code/target/classes started by yang in /Users/yang/myNote/git-note/note/code)
+2019-09-17 18:03:25.175  INFO 2358 --- [main] c.yang.springboot.code.CodeApplication   : No active profile set, falling back to default profiles: default
+2019-09-17 18:03:26.094  INFO 2358 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-09-17 18:03:26.112  INFO 2358 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-17 18:03:26.112  INFO 2358 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-09-17 18:03:26.186  INFO 2358 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-17 18:03:26.186  INFO 2358 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 982 ms
+2019-09-17 18:03:26.337  INFO 2358 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-17 18:03:26.609  INFO 2358 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-09-17 18:03:26.612  INFO 2358 --- [main] c.yang.springboot.code.CodeApplication   : Started CodeApplication in 1.715 seconds (JVM running for 2.092)
+2019-09-17 18:03:35.397  INFO 2358 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-17 18:03:35.398  INFO 2358 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-17 18:03:35.402  INFO 2358 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-09-17 18:03:35.901  INFO 2358 --- [http-nio-8082-exec-1] c.y.springboot.code.controler.WXLogin    : oSC-A4gJk2LpuGaAt_f71WcgIBOc
+2019-09-17 18:03:42.958  INFO 2358 --- [http-nio-8082-exec-2] c.y.springboot.code.controler.WXLogin    : oSC-A4gJk2LpuGaAt_f71WcgIBOc
+2019-09-17 18:03:46.472  INFO 2358 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

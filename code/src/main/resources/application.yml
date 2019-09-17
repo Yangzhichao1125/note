@@ -19,5 +19,6 @@ logging:
             dao:debug
   path: concretepage/logs
   file: readman.log
-
-
+wx:
+  appsecret: 220f16d2f88e47ada57eb38f2b81867f
+  appid: wxf465ec59a088a2b1
