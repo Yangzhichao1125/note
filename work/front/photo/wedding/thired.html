@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>新婚快乐</title>
+<style>
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #000000;
+	margin: 0;
+	font-family: Helvetica, sans-serif;;
+	overflow: hidden;
+}
+
+a {
+	color: #ffffff;
+}
+
+#info {
+	position: absolute;
+	width: 100%;
+	color: #ffffff;
+	padding: 5px;
+	font-family: Monospace;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	z-index: 1;
+}
+
+#menu {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+	font-family: verdana,Tahoma,Arial,Hei,"Microsoft Yahei",SimHei;
+}
+
+.element {
+	width: 120px;
+	height: 160px;
+	box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+	border: 1px solid rgba(127,255,255,0.25);
+	text-align: center;
+	cursor: default;
+}
+
+.element:hover {
+	box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+	border: 1px solid rgba(127,255,255,0.75);
+}
+
+	.element .number {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-size: 12px;
+		color: rgba(127,255,255,0.75);
+	}
+
+	.element .symbol {
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		right: 0px;
+		font-size: 60px;
+		font-weight: bold;
+		color: rgba(255,255,255,0.75);
+		text-shadow: 0 0 10px rgba(0,255,255,0.95);
+	}
+
+	.element .details {
+		position: absolute;
+		bottom: 15px;
+		left: 0px;
+		right: 0px;
+		font-size: 12px;
+		color: rgba(127,255,255,0.75);
+	}
+
+button {
+	color: rgba(127,255,255,0.75);
+	background: transparent;
+	outline: 1px solid rgba(127,255,255,0.75);
+	border: 0px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(0,255,255,0.5);
+}
+button:active {
+	color: #000000;
+	background-color: rgba(0,255,255,0.75);
+}
+</style>
+</head>
+<body>
+<script src="js/three.min.js" ></script>
+<script src="js/tween.min.js" ></script>
+<script src="js/TrackballControls.js" ></script>
+<script src="js/CSS3DRenderer.js" ></script>
+
+<div id="container"></div>
+<div id="info">新婚快乐</div>
+<div id="menu">
+<button id="onlyOne">封面</button>
+<button id="table">心形</button>
+<button id="sphere">球体</button>
+<button id="dragon">长龙</button>
+<button id="helix">螺旋</button>
+<button id="grid">网格</button>
+
+</div>
+
+<script>
+
+var table = [
+	"H", "Hydrogen", "1.00794", 11, 1,
+	"He", "Helium", "4.002602", 12, 1,
+	"Li", "Lithium", "#6.941", 13, 1,
+	"Be", "Beryllium", "9.012182", 6, 1,
+	"B", "Boron", "#10.811", 7, 1,
+	"C", "Carbon", "#12.0107", 5, 1,
+	"N", "Nitrogen", "#14.0067", 4, 2,
+	"O", "Oxygen", "#15.9994", 5, 2,
+	"F", "Fluorine", "18.9984032", 6, 2,
+	"Ne", "Neon", "#20.1797", 7, 2,
+	"Na", "Sodium", "22.98976...", 8, 2,
+	"Mg", "Magnesium", "#24.305", 10, 2,
+	"Al", "Aluminium", "26.9815386", 11, 2,
+	"Si", "Silicon", "#28.0855", 12, 2,
+	"P", "Phosphorus", "30.973762", 13, 2,
+	"S", "Sulfur", "#32.065", 14, 2,
+	"Cl", "Chlorine", "#35.453", 14, 3,
+	"Ar", "Argon", "#39.948", 15, 3,
+	"H", "Hydrogen", "1.00794", 3, 3,
+	"He", "Helium", "4.002602", 4, 3,
+	"Li", "Lithium", "#6.941", 5, 3,
+	"Be", "Beryllium", "9.012182", 6, 3,
+	"B", "Boron", "#10.811", 7, 3,
+	"C", "Carbon", "#12.0107", 8, 3,
+	"N", "Nitrogen", "#14.0067", 9, 3,
+	"O", "Oxygen", "#15.9994", 10, 3,
+	"F", "Fluorine", "18.9984032", 11,3,
+	"Ne", "Neon", "#20.1797", 12, 3,
+	"Na", "Sodium", "22.98976...", 13, 3,
+	"Mg", "Magnesium", "#24.305", 9, 4,
+	"Al", "Aluminium", "26.9815386", 10, 4,
+	"Si", "Silicon", "#28.0855", 11, 4,
+	"P", "Phosphorus", "30.973762", 12, 4,
+	"S", "Sulfur", "#32.065", 13, 4,
+	"Cl", "Chlorine", "#35.453", 14, 4,
+	"Ar", "Argon", "#39.948", 15, 4,
+	"H", "Hydrogen", "1.00794", 3, 4,
+	"He", "Helium", "4.002602", 4, 4,
+	"Li", "Lithium", "#6.941", 5, 4,
+	"Be", "Beryllium", "9.012182", 6, 4,
+	"B", "Boron", "#10.811", 7, 4,
+	"C", "Carbon", "#12.0107", 8, 4,
+	"N", "Nitrogen", "#14.0067", 9, 5,
+	"O", "Oxygen", "#15.9994", 10, 5,
+	"F", "Fluorine", "18.9984032", 11, 5,
+	"Ne", "Neon", "#20.1797", 12, 5,
+	"Na", "Sodium", "22.98976...", 13, 5,
+	"Mg", "Magnesium", "#24.305", 14, 5,
+	"Al", "Aluminium", "26.9815386", 4, 5,
+	"Si", "Silicon", "#28.0855", 5, 5,
+	"P", "Phosphorus", "30.973762", 6, 5,
+	"S", "Sulfur", "#32.065", 7, 5,
+	"Cl", "Chlorine", "#35.453", 8, 5,
+	"Ar", "Argon", "#39.948", 11, 6,
+	"H", "Hydrogen", "1.00794", 12, 6,
+	"He", "Helium", "4.002602", 13, 6,
+	"Li", "Lithium", "#6.941", 5, 6,
+	"Be", "Beryllium", "9.012182", 6, 6,
+	"B", "Boron", "#10.811", 7, 6,
+	"C", "Carbon", "#12.0107", 8, 6,
+	"N", "Nitrogen", "#14.0067", 9, 6,
+	"O", "Oxygen", "#15.9994", 10, 6,
+	"F", "Fluorine", "18.9984032", 10, 7,
+	"Ne", "Neon", "#20.1797", 11, 7,
+	"Na", "Sodium", "22.98976...", 12, 7,
+	"Mg", "Magnesium", "#24.305", 6, 7,
+	"Al", "Aluminium", "26.9815386", 7, 7,
+	"Si", "Silicon", "#28.0855", 8, 7,
+	"P", "Phosphorus", "30.973762", 9, 7,
+	"S", "Sulfur", "#32.065", 7, 8,
+	"Cl", "Chlorine", "#35.453", 8, 8,
+	"Ar", "Argon", "#39.948", 9, 8,
+	"H", "Hydrogen", "1.00794", 10, 8,
+	"He", "Helium", "4.002602", 11, 8,
+	"Li", "Lithium", "#6.941", 8, 9,
+	"Be", "Beryllium", "9.012182", 9,9,
+	"B", "Boron", "#10.811", 10, 9,
+	"N", "Nitrogen", "#14.0067", 9, 10,
+
+	"P", "Phosphorus", "30.973762", 3, 5,
+	"S", "Sulfur", "#32.065", 15, 5,
+	"Cl", "Chlorine", "#35.453", 4, 6,
+	"Ar", "Argon", "#39.948", 14, 6,
+	"H", "Hydrogen", "1.00794", 5, 7,
+	"He", "Helium", "4.002602", 13, 7,
+	"Li", "Lithium", "#6.941", 6, 8,
+	"Be", "Beryllium", "9.012182", 12,8,
+	"B", "Boron", "#10.811", 7, 9,
+	"N", "Nitrogen", "#14.0067", 11, 9,
+	
+
+];
+
+var camera, scene, renderer;
+var controls;
+
+var objects = [];
+var targets = { table: [], sphere: [], helix: [], grid: [] ,dragon:[],onlyOne:[]};
+
+init();
+animate();
+
+function init() {
+
+	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
+	camera.position.z = 3000;
+
+	scene = new THREE.Scene();
+
+	// table
+
+	for ( var i = 0; i < table.length; i += 5  ) {
+
+		var element = document.createElement( 'div' );
+		element.className = 'element';
+		// element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
+		   element.style.backgroundImage = 'url(marry/marry'+(i/5)+'.jpg)';
+		// var number = document.createElement( 'div' );
+		// number.className = 'number';
+		// number.textContent = (i/5) + 1;
+		// element.appendChild( number );
+
+		// var symbol = document.createElement( 'div' );
+		// symbol.className = 'symbol';
+		// symbol.textContent = table[ i ];
+		// element.appendChild( symbol );
+
+		// var details = document.createElement( 'div' );
+		// details.className = 'details';
+		// details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];
+		// element.appendChild( details );
+
+		var object = new THREE.CSS3DObject( element );
+		object.position.x = Math.random() * 4000 - 2000;
+		object.position.y = Math.random() * 4000 - 2000;
+		object.position.z = Math.random() * 4000 - 2000;
+		scene.add( object );
+
+		objects.push( object );
+
+		//
+
+		var object = new THREE.Object3D();
+		object.position.x = ( table[ i + 3 ] * 140 ) - 1330;
+		object.position.y = - ( table[ i + 4 ] * 180 ) + 990;
+
+		targets.table.push( object );
+
+	}
+
+	// sphere
+
+	var vector = new THREE.Vector3();
+
+	for ( var i = 0, l = objects.length; i < l; i ++ ) {
+
+		var phi = Math.acos( -1 + ( 2 * i ) / l );
+		var theta = Math.sqrt( l * Math.PI ) * phi;
+
+		var object = new THREE.Object3D();
+
+		object.position.x = 800 * Math.cos( theta ) * Math.sin( phi );
+		object.position.y = 800 * Math.sin( theta ) * Math.sin( phi );
+		object.position.z = 800 * Math.cos( phi );
+
+		vector.copy( object.position ).multiplyScalar( 2 );
+
+		object.lookAt( vector );
+
+		targets.sphere.push( object );
+
+	}
+
+	// helix
+
+	var vector = new THREE.Vector3();
+
+	for ( var i = 0, l = objects.length; i < l; i ++ ) {
+
+		var phi = i * 0.175 + Math.PI;
+
+		var object = new THREE.Object3D();
+
+		object.position.x = 900 * Math.sin( phi );
+		object.position.y = - ( i * 8 ) + 450;
+		object.position.z = 900 * Math.cos( phi );
+
+		vector.x = object.position.x * 2;
+		vector.y = object.position.y;
+		vector.z = object.position.z * 2;
+
+		object.lookAt( vector );
+
+		targets.helix.push( object );
+
+	}
+
+	// grid
+
+	for ( var i = 0; i < objects.length; i ++ ) {
+
+		var object = new THREE.Object3D();
+
+		object.position.x = ( ( i % 5 ) * 400 ) - 800;
+		object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
+		object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2000;
+
+		targets.grid.push( object );
+
+	}
+	
+		// dragon
+
+	for ( var i = 0; i < objects.length; i ++ ) {
+
+		var object = new THREE.Object3D();
+
+		object.position.x = 0;
+		object.position.y = 0;
+		object.position.z = ( Math.floor( i ) ) * 500 - 25000;
+
+		targets.dragon.push( object );
+
+	}
+	
+		// onlyOne
+
+	for ( var i = 0; i < objects.length; i ++ ) {
+
+		var object = new THREE.Object3D();
+
+		object.position.x = 0;
+		object.position.y = 0;
+		object.position.z = 0;
+
+		targets.onlyOne.push( object );
+
+	}
+
+	//
+
+	renderer = new THREE.CSS3DRenderer();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.domElement.style.position = 'absolute';
+	document.getElementById( 'container' ).appendChild( renderer.domElement );
+
+	//
+
+	controls = new THREE.TrackballControls( camera, renderer.domElement );
+	controls.rotateSpeed = 0.5;
+	controls.minDistance = 500;
+	controls.maxDistance = 6000;
+	controls.addEventListener( 'change', render );
+
+	var button = document.getElementById( 'table' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.table, 7000 );
+
+	}, false );
+
+	var button = document.getElementById( 'sphere' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.sphere, 5000 );
+
+	}, false );
+
+	var button = document.getElementById( 'helix' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.helix, 5000 );
+
+	}, false );
+
+	var button = document.getElementById( 'grid' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.grid, 5000 );
+
+	}, false );
+	
+	var button = document.getElementById( 'dragon' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.dragon, 5000 );
+
+	}, false );
+	
+	var button = document.getElementById( 'onlyOne' );
+	button.addEventListener( 'click', function ( event ) {
+
+		transform( targets.onlyOne, 5000 );
+
+	}, false );
+
+	transform( targets.onlyOne, 5000 );
+
+	//
+
+	window.addEventListener( 'resize', onWindowResize, false );
+
+}
+
+function transform( targets, duration ) {
+
+	TWEEN.removeAll();
+
+	for ( var i = 0; i < objects.length; i ++ ) {
+
+		var object = objects[ i ];
+		var target = targets[ i ];
+
+		new TWEEN.Tween( object.position )
+			.to( { x: target.position.x, y: target.position.y, z: target.position.z }, Math.random() * duration + duration )
+			.easing( TWEEN.Easing.Exponential.InOut )
+			.start();
+
+		new TWEEN.Tween( object.rotation )
+			.to( { x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration )
+			.easing( TWEEN.Easing.Exponential.InOut )
+			.start();
+
+	}
+
+	new TWEEN.Tween( this )
+		.to( {}, duration * 2 )
+		.onUpdate( render )
+		.start();
+
+}
+
+function onWindowResize() {
+
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+
+	renderer.setSize( window.innerWidth, window.innerHeight );
+
+	render();
+
+}
+
+function animate() {
+
+	requestAnimationFrame( animate );
+
+	TWEEN.update();
+
+	controls.update();
+
+}
+
+function render() {
+
+	renderer.render( scene, camera );
+
+}
+window.onload = function(){
+    playMusic();
+}
+function playMusic()
+{
+	var audio = new Audio('music/marry.mp3');
+	audio.play();
+}
+
+</script>
+</body>
+</html>
