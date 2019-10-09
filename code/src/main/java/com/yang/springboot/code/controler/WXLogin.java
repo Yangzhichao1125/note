@@ -28,7 +28,7 @@ public class WXLogin {
 
     @ResponseBody
     @RequestMapping("/wxLogin")
-    public void login(String username,String password,String code){
+    public String login(String code){
 
         // 根据小程序穿过来的code想这个url发送请求
         String url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + appid + "&secret=" + secret + "&js_code=" + code + "&grant_type=authorization_code";
@@ -39,5 +39,6 @@ public class WXLogin {
         // 我们需要的openid，在一个小程序中，openid是唯一的
         String openid = jsonObject.get("openid").toString();
 
+        return openid;
     }
 }

@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/been/RmPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/been/RmPhoto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/GetImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/GetImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/WXLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/WXLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,25 +26,6 @@
               <caret line="55" selection-start-line="55" selection-end-line="67" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/Calculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="43" column="32" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="32" />
-              <folding>
-                <element signature="e#3717#3718#0" expanded="true" />
-                <element signature="e#3750#3751#0" expanded="true" />
-                <element signature="e#3792#3793#0" expanded="true" />
-                <element signature="e#3833#3834#0" expanded="true" />
-                <element signature="e#3874#3875#0" expanded="true" />
-                <element signature="e#3906#3907#0" expanded="true" />
-                <element signature="e#4957#4958#0" expanded="true" />
-                <element signature="e#5032#5033#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -279,18 +259,18 @@
       <workItem from="1569286467610" duration="142000" />
       <workItem from="1569289762287" duration="1645000" />
       <workItem from="1569401068930" duration="761000" />
-      <workItem from="1569402655605" duration="3278000" />
+      <workItem from="1569402655605" duration="3434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10873000" />
+    <option name="totallyTimeSpent" value="11029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2863248" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2863248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -300,7 +280,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
       <window_info anchor="bottom" x="15" y="614" width="1638" height="364" id="Debug" order="3" weight="0.3991228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -336,12 +316,6 @@
           <line>95</line>
           <properties />
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/Calculator.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/yang/code1/stack/MidCalculator.java</url>

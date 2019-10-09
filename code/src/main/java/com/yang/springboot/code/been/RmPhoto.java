@@ -11,11 +11,13 @@ import java.util.Date;
  * @date 2019/09/12
  */
 @Data
-public class rmPhoto {
+public class RmPhoto {
     private long photoId;
     private int type;
     private String address;
     private Date createTime;
     private Date modifyTime;
     private int source;
+    private int love;
+    private int hate;
 }
