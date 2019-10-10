@@ -74,6 +74,100 @@ The Collections Framework API is much smaller than it would have been had it exp
 
 集合框架API小很多了相比于它输出45个单独的公开类，每个类有便利的实现。它不只是大量的API减少，同时也减少了概念的权重：程序员必须掌握大量且困难的概念才能使用API。程序员知道这个返回对象恰好在API接口上有详细的说明。所以不需要为这个实现类读多余的文档。而且，使用静态工厂方法需要客户端通过接口而不是通过实现类接收返回值对象，这通常是一个好的实践
 
+As of Java 8, the restriction that interfaces cannot contain static methods was eliminated, so there is typically little reason to provide a noninstantiable companion class for an interface. Many public static members that would have been at home in such a class should instead be put in the interface itself. Note, however, that it may still be necessary to put the bulk of the implementation code behind these static methods in a separate package-private class. This is because Java 8 requires all static members of an interface to be public. Java 9 allows private static methods, but static fields and static member classes are still required to be public.
+
+从java8 开始，接口不能包含静态方法的这个限制被消除了，所以通常没有理由提供给一个非实例化的伙伴类给接口。在这样一个类中的许多公共静态成员应该放回它的接口本身。注意，但是放置大量的实现代码在静态方法下在分配私有包类时仍然是必要的。这是因为java 8 要求接口下所有静态成员都是公共的。java 9 允许私有静态方法，但是静态字段和静态成员类仍然需要时公共的。
+
+A fourth advantage of static factories is that the class of the returned object can vary from call to call as a function of the input parameters. Any subtype of the declared return type is permissible. The class of the returned object can also vary from release to release.
+
+静态工厂的第四个优点是返回对象的类可以根据调用不同输入参数的方法而不同。所有声明返回类型的字类型都是被允许的。返回对象的类同样可以根据发布的不同而不同。
+
+The EnumSet class (Item 36) has no public constructors, only static factories. In the OpenJDK implementation, they return an instance of one of two subclasses, depending on the size of the underlying enum type: if it has sixty-four or fewer elements, as most enum types do, the static factories return a RegularEnumSet instance, which is backed by a single long; if the enum type has sixty-five or more elements, the factories return a JumboEnumSet instance, backed by a long array.
+
+枚举集合类没有公有构造器，只有静态工厂，在OpenJDK实现里，它们返回一个两者之一的子类型实例，根据底层枚举类型的大小：如果小于等于64个节点，多数枚举类是这样的，静态工厂返回一个RegularEnumSet实例，返回一个long类型；如果枚举类型后多余等于65个节点，静态工厂返回JumboEnumSet实例，返回一个long类型数组
+
+The existence of these two implementation classes is invisible to clients. If RegularEnumSet ceased to offer performance advantages for small enum types, it could be eliminated from a future release with no ill effects. Similarly, a future release could add a third or fourth implementation of EnumSet if it proved beneficial for performance. Clients neither know nor care about the class of the object they get back from the factory; they care only that it is some subclass of EnumSet.
+
+现存的这两个实现类客户端是看不见的，如果RegularEnumSet 停止为小的枚举类型提供性能优势，它可能在未来版本中淘汰而不带来影响。同样的未来版本可以添加第三或第四个实现枚举集合，如果它提供性能上的优势。客户端同样不知道且不关心这个从工厂返回对象的类；它们只关心它是否是枚举集合的子类。
+
+A fifth advantage of static factories is that the class of the returned object need not exist when the class containing the method is written. Such flexible static factory methods form the basis of service provider frameworks, like the Java Database Connectivity API (JDBC). A service provider framework is a system in which providers implement a service, and the system makes the implementations available to clients, decoupling the clients from the implementations.
+
+静态工厂的第五个好处是，在编写包含该方法的类已经写好了的时候，返回对象的类不需要存在。这种灵活静态工厂方法构成服务框架基础，像Java数据库连接API（JDBC），一个服务提供框架是提供者实现一个服务的系统，并且这个系统使得实现对客户端可用，从而将客户端从实现中分离出来。
+
+There are three essential components in a service provider framework: a service interface, which represents an implementation; a provider registration API, which providers use to register implementations; and a service access API, which clients use to obtain instances of the service. The service access API may allow clients to specify criteria for choosing an implementation. In the absence of such criteria, the API returns an instance of a default implementation, or allows the client to cycle through all available implementations. The service access API is the flexible static factory that forms the basis of the service provider framework.
+
+在服务提供框架中有三个必不可少的组件：一个表示实现的服务接口；提供者注册API，用于提供住车实现；以及一个服务接受API，用于客户端获取服务的实例。服务接受API允许客户端选择实现的具体标准。在缺少这样的标准下，API返回一个默认实现的实例，或者允许客户端遍历所有可用实例。服务接收API是灵活静态工厂为服务框架提供基础。
+
+An optional fourth component of a service provider framework is a service provider interface, which describes a factory object that produce instances of the service interface. In the absence of a service provider interface, implementations must be instantiated reflectively (Item 65). In the case of JDBC, Connection plays the part of the service interface, DriverManager.registerDriver is the provider registration API, DriverManager.getConnection is the service access API, and Driver is the service provider interface.
+
+一个可选的服务提供者框架的第四个组件is服务提供者接口，这个接口描述一个提供服务接口实例工厂对象。在服务提供者接口缺失的情况下，实现必须实现反射。在JDBC的情况下，连接扮演着服务接口这部分角色，DriverManager.registerDriver 是提供者注册API，DriverManager.getConnection 是服务接收API， 而Driver是服务提供者接口。
+
+There are many variants of the service provider framework pattern. For example, the service access API can return a richer service interface to clients than the one furnished by providers. This is the Bridge pattern [Gamma95]. Dependency injection frameworks (Item 5) can be viewed as powerful service providers. Since Java 6, the platform includes a general-purpose service provider framework, java.util.ServiceLoader, so you needn’t, and generally shouldn’t, write your own (Item 59). JDBC doesn’t use ServiceLoader, as the former predates the latter.
+
+服务提供者框架有许多变种，比如说，服务访问API可以比一个提供者返回更丰富的服务接口到客户端这是桥接模式。依赖于注入框架，可以被视为强大的服务提供者。紫Java6之后，平台包含一个通用的服务提供者框架，java.util.ServiceLoader,所以你不需要一般也不应该自己编写。JDBC 不实用 ServiceLoader，因为前者早于后者
+
+The main limitation of providing only static factory methods is that classes without public or protected constructors cannot be subclassed. For example, it is impossible to subclass any of the convenience implementation classes in the Collections Framework. Arguably this can be a blessing in disguise because it encourages programmers to use composition instead of inheritance (Item 18), and is required for immutable types (Item 17).
+
+只提供静态工厂方法的主要限制是类没有公共的或者保护的构造器不能有子类。比如说，在集合框架里的任意方便实现类是不可能子类化的，可以说这是因祸得福因为它鼓励程序员使用组合而非继承，且需要不可变类型
+
+A second shortcoming of static factory methods is that they are hard for programmers to find. They do not stand out in API documentation in the way that constructors do, so it can be difficult to figure out how to instantiate a class that provides static factory methods instead of constructors. The Javadoc tool may someday draw attention to static factory methods. In the meantime, you can reduce this problem by drawing attention to static factories in class or interface documentation and by adhering to common naming conventions. Here are some common names for static factory methods. This list is far from exhaustive:
+
+静态工厂的第二个缺点是程序员很难找到它们。它们不会突出在API文档中，同样构造器也是。所以它很难找出如何实例化一个类提供静态工厂方法而不是构造器。Java文档工具油田可能注意到静态工厂方法。与此同时，你通过关注在类或者在接口文档中的静态工厂和通过遵守通用的命名规定可以减少这个问题。以下是一些通用的静态工厂方法名字，这个列表只是冰山一角：
+
+• from—A type-conversion method that takes a single parameter and returns a corresponding instance of this type, for example:
+
+from --A类型 方法类型转变输入一个单一参数返回一个相关词类型的实例，比如说
+
+Date d = Date.from(instant); 
+
+• of—An aggregation method that takes multiple parameters and returns an instance of this type that incorporates them, for example:
+
+of ---一个聚合方法，接收许多参数并且返回一个这种类型实例，并把它们合并在一起，例如：
+
+Set<Rank> faceCards = EnumSet.of(JACK, QUEEN, KING);
+
+ • valueOf—A more verbose alternative to from and of, for example:
+
+valueOf --- 比from和of更冗长的选择
+
+BigInteger prime = BigInteger.valueOf(Integer.MAX_VALUE);
+
+ • instance or getInstance—Returns an instance that is described by its parameters (if any) but cannot be said to have the same value, for example:
+
+instance or getInstance ---返回一个描述自身参数（如果有的话）的实例，但不能说它具有相同值，例如
+
+StackWalker luke = StackWalker.getInstance(options); 
+
+• create or newInstance—Like instance or getInstance, except that the method guarantees that each call returns a new instance, for example:
+
+create or newInstance ---类似于instance or getInstance，除了该方法保证每个调用返回一个新的实例
+
+Object newArray = Array.newInstance(classObject, arrayLen); 
+
+• getType—Like getInstance, but used if the factory method is in a different class. Type is the type of object returned by the factory method, for example:
+
+getType --- 类似于getInstance，当工厂方法在不同个类时使用，类型是这个工厂方法对象的返回类型，例如：
+
+FileStore fs = Files.getFileStore(path); 
+
+• newType—Like newInstance, but used if the factory method is in a different class. Type is the type of object returned by the factory method, for example:
+
+newType ---类似与newInstance，当工厂方法在不同类时使用，类型是这个工厂方法返回对象的类型，例如
+
+BufferedReader br = Files.newBufferedReader(path); 
+
+• type—A concise alternative to getType and newType, for example:
+
+type ---getType和newType的一个简单选择例如
+
+List<Complaint> litany = Collections.list(legacyLitany);
+
+In summary, static factory methods and public constructors both have their uses, and it pays to understand their relative merits. Often static factories are preferable, so avoid the reflex to provide public constructors without first considering static factories.
+
+总的来说，静态工厂方法和公有构造器都有各自的使用，这取决于明白它们各自相对的价值，通常来说静态工厂更适合选择，所以避免在没有首先考虑静态工厂的情况下使用公有构造器
+
+
+
 
 
 
