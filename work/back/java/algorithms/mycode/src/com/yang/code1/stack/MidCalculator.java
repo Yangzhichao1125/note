@@ -9,7 +9,7 @@ package com.yang.code1.stack;
 public class MidCalculator {
 
     public static void main(String[] args) {
-        String str = "70+2*6-2";
+        String str = "3-5-8";
         ArrStack numStack = new ArrStack(20);
         ArrStack signStack = new ArrStack(10);
 
@@ -26,7 +26,7 @@ public class MidCalculator {
                 if (signStack.isEmpty()) {
                     signStack.push(curChar);
                 }else {
-                //优先级后面的比前面的小则出栈操作否则直接入栈
+                //优先级后面的小于等于前面则出栈操作否则直接入栈
                 if(priority(curChar) <= priority(signStack.peek())){
                     int signPop = signStack.pop();
                     int next = numStack.pop();

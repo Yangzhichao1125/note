@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f10cf91d-e16c-4345-8308-b40a283274d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../code/readman.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../code/readman.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/been/RmPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/been/RmPhoto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/GetImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/GetImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/WXLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../code/src/main/java/com/yang/springboot/code/controler/WXLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yang/code1/problems/Migong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mycode/com/yang/code1/singleLinked/ArrayStack2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mycode/com/yang/code1/singleLinked/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/mycode/com/yang/code1/stack/MidCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mycode/com/yang/code1/stack/MidCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yang/code1/stack/BackExpresstion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yang/code1/stack/BackExpresstion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yang/code1/stack/MidCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yang/code1/stack/MidCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yang/code1/stack/PolandNotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yang/code1/stack/PolandNotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../book/effective java 3rd edition.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,10 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/MyNode.java">
+        <entry file="file://$PROJECT_DIR$/src/com/yang/code1/stack/BackExpresstion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="55" selection-start-line="55" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="2375">
+              <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,35 +37,89 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/yang/code1/stack/MidCalculator.java">
+        <entry file="file://$PROJECT_DIR$/src/com/yang/code1/problems/Migong.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            <state relative-caret-position="329">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8037">
+              <caret line="461" selection-start-line="461" selection-end-line="461" />
               <folding>
-                <element signature="e#1078#1079#0" expanded="true" />
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
-                <element signature="e#2260#2261#0" expanded="true" />
-                <element signature="e#2290#2291#0" expanded="true" />
+                <element signature="e#6283#6284#0" expanded="true" />
+                <element signature="e#6351#6352#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/LinkedList.java">
+        <entry file="file://$PROJECT_DIR$/src/com/yang/code1/stack/PolandNotation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="100" column="18" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="18" />
+            <state relative-caret-position="1311">
+              <caret line="71" column="17" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="17" />
               <folding>
-                <element signature="e#8938#8939#0" expanded="true" />
-                <element signature="e#8965#8966#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/URLClassPath.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2261">
+              <caret line="171" selection-start-line="171" selection-end-line="171" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5814">
+              <caret line="361" selection-start-line="361" selection-end-line="361" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5567">
+              <caret line="356" selection-start-line="356" selection-end-line="356" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4484">
+              <caret line="257" selection-start-line="257" selection-end-line="257" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Launcher.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4161">
+              <caret line="250" selection-start-line="250" selection-end-line="250" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/security/AccessController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11856">
+              <caret line="651" column="8" selection-start-line="651" selection-start-column="8" selection-end-line="651" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -77,6 +136,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>return si</find>
+      <find>modCount</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,7 +147,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/yang/code1/singleLinked/MyNode.java" />
         <option value="$PROJECT_DIR$/src/com/yang/code1/singleLinked/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/com/yang/code1/stack/PolandNotation.java" />
+        <option value="$PROJECT_DIR$/src/com/yang/code1/singleLinked/ArrayTestAdd.java" />
+        <option value="$PROJECT_DIR$/src/com/yang/code1/stack/BackExpresstion.java" />
         <option value="$PROJECT_DIR$/src/com/yang/code1/stack/MidCalculator.java" />
+        <option value="$PROJECT_DIR$/src/com/yang/code1/problems/Migong.java" />
       </list>
     </option>
   </component>
@@ -102,6 +166,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="CatdeaLogs" />
       <pane id="ProjectPane">
         <subPane>
@@ -143,23 +209,12 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="yang" type="462c0819:PsiDirectoryNode" />
               <item name="code1" type="462c0819:PsiDirectoryNode" />
-              <item name="singleLinked" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mycode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mycode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="yang" type="462c0819:PsiDirectoryNode" />
-              <item name="code1" type="462c0819:PsiDirectoryNode" />
-              <item name="stack" type="462c0819:PsiDirectoryNode" />
+              <item name="problems" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,6 +222,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -180,9 +236,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MidCalculator">
-    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yang.code1.singleLinked.Calculator" />
+  <component name="RunManager" selected="Application.Migong">
+    <configuration name="ArrayTestAdd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yang.code1.singleLinked.ArrayTestAdd" />
       <module name="mycode" />
       <extension name="coverage">
         <pattern>
@@ -194,12 +250,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="BackExpresstion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yang.code1.stack.BackExpresstion" />
       <module name="mycode" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yang.code1.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,12 +276,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yang.code1.singleLinked.MyNode" />
+    <configuration name="Migong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yang.code1.problems.Migong" />
       <module name="mycode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yang.code1.singleLinked.*" />
+          <option name="PATTERN" value="com.yang.code1.problems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolandNotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yang.code1.stack.PolandNotation" />
+      <module name="mycode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yang.code1.stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -231,16 +303,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.MyNode" />
-      <item itemvalue="Application.Calculator" />
       <item itemvalue="Application.MidCalculator" />
+      <item itemvalue="Application.PolandNotation" />
+      <item itemvalue="Application.BackExpresstion" />
+      <item itemvalue="Application.ArrayTestAdd" />
+      <item itemvalue="Application.Migong" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Migong" />
         <item itemvalue="Application.MidCalculator" />
-        <item itemvalue="Application.Calculator" />
-        <item itemvalue="Application.MyNode" />
+        <item itemvalue="Application.BackExpresstion" />
+        <item itemvalue="Application.ArrayTestAdd" />
+        <item itemvalue="Application.PolandNotation" />
       </list>
     </recent_temporary>
   </component>
@@ -260,17 +335,24 @@
       <workItem from="1569289762287" duration="1645000" />
       <workItem from="1569401068930" duration="761000" />
       <workItem from="1569402655605" duration="3434000" />
+      <workItem from="1570704591795" duration="2606000" />
+      <workItem from="1570790233193" duration="3227000" />
+      <workItem from="1570860434126" duration="4550000" />
+      <workItem from="1570873568848" duration="929000" />
+      <workItem from="1571137386768" duration="1649000" />
+      <workItem from="1571191450639" duration="657000" />
+      <workItem from="1571210242267" duration="106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11029000" />
+    <option name="totallyTimeSpent" value="24753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2863248" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -280,7 +362,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.59539473" />
       <window_info anchor="bottom" x="15" y="614" width="1638" height="364" id="Debug" order="3" weight="0.3991228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -295,7 +377,7 @@
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24969475" />
       <window_info anchor="right" id="Maven" order="3" weight="0.32967034" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -312,30 +394,67 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/MyNode.java</url>
-          <line>95</line>
+          <url>file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/ArrayTestAdd.java</url>
+          <line>13</line>
           <properties />
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/yang/code1/stack/MidCalculator.java</url>
-          <line>30</line>
+          <url>file://$PROJECT_DIR$/src/com/yang/code1/stack/BackExpresstion.java</url>
+          <line>34</line>
           <properties />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yang/code1/problems/Migong.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>this.elementData.length</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.elementData</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/MyNode.java">
+    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/Calculator.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/java/util/HashMap.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="55" selection-start-line="55" selection-end-line="67" selection-end-column="5" />
+        <state>
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#74373#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/java/util/Map.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#6346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="657" column="18" selection-start-line="657" selection-start-column="18" selection-end-line="657" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -350,39 +469,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/Calculator.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="32" />
+        <state relative-caret-position="257">
+          <caret line="598" column="15" lean-forward="true" selection-start-line="598" selection-start-column="15" selection-end-line="598" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/MyNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1634">
+          <caret line="89" column="32" selection-start-line="89" selection-start-column="32" selection-end-line="97" selection-end-column="29" />
           <folding>
-            <element signature="e#3717#3718#0" expanded="true" />
-            <element signature="e#3750#3751#0" expanded="true" />
-            <element signature="e#3792#3793#0" expanded="true" />
-            <element signature="e#3833#3834#0" expanded="true" />
-            <element signature="e#3874#3875#0" expanded="true" />
-            <element signature="e#3906#3907#0" expanded="true" />
-            <element signature="e#4957#4958#0" expanded="true" />
-            <element signature="e#5032#5033#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/singleLinked/ArrayTestAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yang/code1/stack/MidCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="2793">
+          <caret line="157" column="1" selection-start-line="8" selection-end-line="157" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/stack/BackExpresstion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2375">
+          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
           <folding>
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#2260#2261#0" expanded="true" />
-            <element signature="e#2290#2291#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8037">
+          <caret line="461" selection-start-line="461" selection-end-line="461" />
+          <folding>
+            <element signature="e#6283#6284#0" expanded="true" />
+            <element signature="e#6351#6352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/stack/PolandNotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/URLClassPath.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5814">
+          <caret line="361" selection-start-line="361" selection-end-line="361" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5567">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4484">
+          <caret line="257" selection-start-line="257" selection-end-line="257" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4161">
+          <caret line="250" selection-start-line="250" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/security/AccessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11856">
+          <caret line="651" column="8" selection-start-line="651" selection-start-column="8" selection-end-line="651" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yang/code1/problems/Migong.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
         </state>
       </provider>
     </entry>
