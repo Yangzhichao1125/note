@@ -34,7 +34,7 @@
 
 - 可见性
 
-  ```
+  ```java
   /**
    * @Author: cuzz
    * @Date: 2019/4/16 21:29
@@ -74,7 +74,7 @@
 
 - 原子性
 
-  ```
+  ```java
   public class VolatileDemo {
       public static void main(String[] args) {
          // test01();
@@ -125,7 +125,7 @@
 
   - 代码示例
 
-    ```
+    ```java
     public class ReSortSeqDemo {
         int a = 0;
         boolean flag = false;
@@ -157,7 +157,7 @@ volatile 实现禁止指令重排序的优化，从而避免了多线程环境�
 - 保证特定操作的执行顺序
 - 保证某些变量的内存可见性（利用该特性实现 volatile 的内存可见性）
 
-由于编译器个处理器都能执行指令重排序优化，如果在指令间插入一条 Memory Barrier 则会告诉编译器和 CPU，不管什么指令都不能个这条 Memory Barrier 指令重排序，也就是说通过插入内存屏障禁止在内存屏障前后执行重排序优化。内存屏障另一个作用是强制刷出各种 CPU 缓存数据，因此任何 CPU 上的线程都能读取到这些数据的最新版本。
+由于编译器每个处理器都能执行指令重排序优化，如果在指令间插入一条 Memory Barrier 则会告诉编译器和 CPU，不管什么指令都不能个这条 Memory Barrier 指令重排序，也就是说通过插入内存屏障禁止在内存屏障前后执行重排序优化。内存屏障另一个作用是强制刷出各种 CPU 缓存数据，因此任何 CPU 上的线程都能读取到这些数据的最新版本。
 
 下面是保守策略下，volatile写插入内存屏障后生成的指令序列示意图：
 
@@ -180,7 +180,7 @@ volatile 实现禁止指令重排序的优化，从而避免了多线程环境�
 
 - 多线程环境下可能存在的安全问题
 
-  ```
+  ```java
   @NotThreadSafe
   public class Singleton01 {
       private static Singleton01 instance = null;
@@ -210,7 +210,7 @@ volatile 实现禁止指令重排序的优化，从而避免了多线程环境�
 
   - 代码
 
-  ```
+  ```java
   public class Singleton02 {
       private static volatile Singleton02 instance = null;
       private Singleton02() {
@@ -263,7 +263,7 @@ volatile 实现禁止指令重排序的优化，从而避免了多线程环境�
 
 ## CAS 你知道吗？
 
-```
+```java
 public class CASDemo {
     public static void main(String[] args) {
         AtomicInteger atomicInteger = new AtomicInteger(666);
@@ -281,7 +281,7 @@ public class CASDemo {
 
 #### getAndIncrement();
 
-```
+```java
 /**
  * Atomically increments by one the current value.
  *
@@ -296,7 +296,7 @@ public final int getAndIncrement() {
 
 #### UnSafe 类
 
-```
+```java
 public class AtomicInteger extends Number implements java.io.Serializable {
     private static final long serialVersionUID = 6214790243416807050L;
 
@@ -331,7 +331,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
 - 分析一下 getAndAddInt 这个方法
 
-  ```
+  ```java
   // unsafe.getAndAddInt
   public final int getAndAddInt(Object obj, long valueOffset, long expected, int val) {
       int temp;
@@ -354,7 +354,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
 - 原子引用
 
-  ```
+  ```java
   public class AtomicReferenceDemo {
       public static void main(String[] args) {
           User cuzz = new User("cuzz", 18);
@@ -369,7 +369,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
 - ABA 问题是怎么产生的
 
-  ```
+  ```java
   /**
    * @program: learn-demo
    * @description: ABA
@@ -403,7 +403,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
 - 时间戳原子引用
 
-  ```
+  ```java
   package com.cuzz.thread;
   
   import java.util.concurrent.atomic.AtomicReference;
@@ -454,7 +454,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
 - 故障现象
 
-  ```
+  ```java
   public class ContainerDemo {
       public static void main(String[] args) {
           List<Integer> list = new ArrayList<>();
@@ -507,7 +507,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
   - 可重入锁
 
-    ```
+    ```Java
     public class ReentrantLock {
         boolean isLocked = false;
         Thread lockedBy = null;
@@ -536,7 +536,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
     测试
 
-    ```
+    ```Java
     public class Count {
     //    NotReentrantLock lock = new NotReentrantLock();
         ReentrantLock lock = new ReentrantLock();
@@ -564,7 +564,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
   - 不可重入锁
 
-    ```
+    ```Java
     public class NotReentrantLock {
         private boolean isLocked = false;
         public synchronized void lock() throws InterruptedException {
@@ -582,7 +582,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
     测试
 
-    ```
+    ```Java
     public class Count {
         NotReentrantLock lock = new NotReentrantLock();
         public void print() throws InterruptedException{
@@ -610,7 +610,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
   - synchronzied
 
-    ```
+    ```Java
     public class SynchronziedDemo {
     
         private synchronized void print() {
@@ -631,7 +631,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
   - ReentrantLock
 
-    ```
+    ```Java
     public class ReentrantLockDemo {
         private Lock lock = new ReentrantLock();
     
@@ -664,7 +664,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
 - 手动实现自旋锁
 
-  ```
+  ```Java
   public class SpinLock {
       private AtomicReference<Thread> atomicReference = new AtomicReference<>();
       private void lock () {
@@ -729,7 +729,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
 - 读写锁例子
 
-  ```
+  ```Java
   public class MyCache {
   
       private volatile Map<String, Object> map = new HashMap<>();
