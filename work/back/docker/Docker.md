@@ -25,3 +25,41 @@
 ## 解决乱码问题：
 
 docker run --name mymysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci 
+
+
+
+
+
+
+
+## docker基础
+
+前世今生：因为环境配置不一样，开发与运维的相爱相杀
+
+搬家/搬楼
+
+目的：一次封装，到处运行
+
+三要素：仓库，镜像，容器 
+
+
+
+docker架构图
+
+cs结构
+
+
+
+Exec.  Attach 
+
+镜像：联合文件系统
+
+docker commit
+
+容器数据卷：数据共享和持久化。-v  双向。     ：ro readOnly 只允许主机对容器修改内容
+
+dockerfile
+
+容器内各种共享
+
+entrypoint / cmd

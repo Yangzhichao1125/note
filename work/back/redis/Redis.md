@@ -1,0 +1,7 @@
+# Redis
+
+stirng
+
+hash
+
+list
