@@ -14,9 +14,10 @@ package com.leetcode.may.thirteen;
 public class One {
 
     public static void main(String[] args) {
-        String str = "abcba";
-        System.out.println(validPalindrome(str));
+        String str = "1";
+//        System.out.println(validPalindrome(str));
 
+        System.out.println(str.hashCode());
     }
 
     public static int [] getIndex(int [] numbers, int target){
