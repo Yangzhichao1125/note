@@ -16,8 +16,8 @@ public class One {
     public static void main(String[] args) {
         String str = "1";
 //        System.out.println(validPalindrome(str));
-
-        System.out.println(str.hashCode());
+        System.out.println(10 & 7);
+//        System.out.println(str.hashCode());
     }
 
     public static int [] getIndex(int [] numbers, int target){
